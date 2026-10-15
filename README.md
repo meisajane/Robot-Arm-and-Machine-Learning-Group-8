@@ -16,9 +16,9 @@ Processing is used for visual input to train the ML model on Wekinator and to se
 
 **The Arduino pins are connected as follows**
 
-D9 - Servo 1 (Claw)
+D9 - Servo 1 (Base)
 
-D10 - Servo 2 (Base)
+D10 - Servo 2 (Claw)
 
 D11 - Servo 3 (Right Joint)
 
