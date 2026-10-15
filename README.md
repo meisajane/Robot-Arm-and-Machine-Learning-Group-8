@@ -16,13 +16,13 @@ Processing is used for visual input to train the ML model on Wekinator and to se
 
 **The Arduino pins are connected as follows**
 
-D9 - Servo 1 (Base)
+D9 - Servo base
 
-D10 - Servo 2 (Claw)
+D10 - Servo claw
 
-D11 - Servo 3 (Right Joint)
+D11 - Servo r
 
-D12 - Servo 4 (Left Joint)
+D12 - Servo l
 
 
 **Directory of Resources**
@@ -38,7 +38,7 @@ D12 - Servo 4 (Left Joint)
 
 - Assemble Robot Arm.
 
-- Upload and run the video_input_100_pixels sketch on Processor to turn on Camera input.
+- Upload and run the sketch_rgb sketch on Processor to turn on Camera input.
 
 - Open Wekinator, set the number of inputs to 3, number of outputs to 1, model selection to “All Classifiers (default)”, classes to 3. Then, click NEXT. 
 
