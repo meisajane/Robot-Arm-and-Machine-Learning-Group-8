@@ -1,7 +1,9 @@
 # Robot-Arm-and-Machine-Learning-Group-8
+
 Sketches for a Wekinator and Arduino laser-cut robot arm, physical build and osc-routing based on https://github.com/IDE-GID-Cyberphysical-Systems/de-arm. Processing camera input code based on https://github.com/IDE-GID-Cyberphysical-Systems/de-arm/tree/main/wekinator-input. Created for IDE Cyber Physical Systems robot arm assignment.
 
 Ran on Arduino Nano Every.
+
 
 **Summary**
 
@@ -10,6 +12,7 @@ RGB based Wekinator model that controls 3 choreographed poses on the robot arm u
 Processing is used for visual input to train the ML model on Wekinator and to send OSC messages between Wekinator and the Arduino.
 
 <img width="3508" height="1084" alt="CPS-robotarm-charts_flowchart" src="https://github.com/user-attachments/assets/e39e1f16-b4fe-4298-8f78-ebd73fb28225" />
+
 
 **The Arduino pins are connected as follows**
 
@@ -21,8 +24,17 @@ D11 - Servo 3 (Right Joint)
 
 D12 - Servo 4 (Left Joint)
 
+
 **Directory of Resources**
 
+| Folder | Filename | Descriptive |
+|---|---|---|
+| Arduino-poses | arduino-poses | Arduino sketch which changes the position of the robot using a machine learning model from Wekinator based on camera input from Processing. |
+|---|---|---|
+| osc-routing | processing-osc-to-arduino | Processing sketch which listens for OSC messages from Wekinator and converts them to serial messages for Arduino; to be run with the arduino-osc-blink Arduino sketch. https://github.com/IDE-GID-Cyberphysical-Systems/de-arm/tree/main |
+|---|---|---|
+| wekinator-input | video_input_100_pixels | Simple Processing sketch which will sample 100 pixels across the camera input and send only those on in OSC messages. https://github.com/IDE-GID-Cyberphysical-Systems/de-arm/tree/main |
+|---|---|---|
 
 
 **Instructions**
@@ -44,6 +56,7 @@ D12 - Servo 4 (Left Joint)
 - Run the osc-routing sketch.
 
 - The Robot Arm should strike 3 poses based on the trained RGB model.
+
 
 **Debugging Decision Tree**
 
