@@ -13,10 +13,10 @@ void setup() {
 
   Serial.begin(9600);
 
-  //l.write(90);
-  //r.write(90);
-  claw.write(110);   // initial: open
- // base.write(90);
+  l.write(90);
+  r.write(90);
+  claw.write(110); 
+  base.write(90);
 }
 
 void loop() {
@@ -27,19 +27,19 @@ void loop() {
     if (message == 1) {
       claw.write(70);
       base.write(45);
-      r.write(90);    // red -> open
+      r.write(90);    // colour 1 -> open
     }
 
     else if (message == 2) {
       claw.write(180);
       base.write(0);
-      r.write(160); // black -> close
+      r.write(160); // colour 2 -> close
     }
 
     else if (message == 3) {
       claw.write(180);
       base.write(130);
-      r.write(20); // blue -> shy
+      r.write(20); // colour 3 -> shy
     }
   }
 }
